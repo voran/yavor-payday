@@ -14,18 +14,18 @@
       </div>
     </div>
   <% end %>
-  <%= f.fields_for :line_items do |ff| %>
+  <%= f.fields_for :line_items do |i| %>
       <div class="form-group">
-        <%= ff.label :description, :class => 'control-label col-lg-2'  %>
+        <%= i.label :description, :class => 'control-label col-lg-2'  %>
         <div class="col-lg-10">
-          <%= ff.text_field :description, { class: 'form-control', value: Rails.application.config.default_line_item_description } %>
+          <%= i.text_field :description, { class: 'form-control', value: Rails.application.config.default_line_item_description } %>
         </div>
         <%=f.error_span(:description) %>
       </div>
       <div class="form-group">
-        <%= ff.label :price, :class => 'control-label col-lg-2'  %>
+        <%= i.label :price, :class => 'control-label col-lg-2'  %>
         <div class="col-lg-10">
-          <%= ff.number_field :price, :class => 'form-control' %>
+          <%= i.number_field :price, :class => 'form-control', :step => 'any' %>
         </div>
         <%=f.error_span(:price) %>
       </div>
