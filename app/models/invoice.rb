@@ -7,8 +7,8 @@ class Invoice < ActiveRecord::Base
   validates_presence_of :due_at, :bill_to
 
   def initialize(attrs = {})
-    attrs[:bill_to] = Rails.application.config.bill_to
-    attrs[:due_at] = Date.today + 7.days
+    attrs[:bill_to] ||= Rails.application.config.bill_to
+    attrs[:due_at] ||= Date.today + 7.days
     super
   end
 

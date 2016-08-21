@@ -7,7 +7,7 @@ class LineItem < ActiveRecord::Base
   validates_presence_of :quantity, :price
 
   def initialize(attrs = {})
-    attrs[:quantity] = 1
+    attrs[:quantity] ||= 1
     super
   end
 
