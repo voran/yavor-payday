@@ -82,6 +82,10 @@ GEM
     money (6.7.1)
       i18n (>= 0.6.4, <= 0.7.0)
       sixarm_ruby_unaccent (>= 1.1.1, < 2)
+    nested_form_fields (0.8)
+      coffee-rails (>= 3.2.1)
+      jquery-rails
+      rails (>= 3.2.0)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
@@ -176,6 +180,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jquery-rails
   less-rails
+  nested_form_fields
   payday
   rails (= 4.2.6)
   sass-rails (~> 5.0)
@@ -187,4 +192,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.12.5
+   1.14.3

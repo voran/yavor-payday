@@ -2,7 +2,7 @@ class Invoice < ActiveRecord::Base
   include Payday::Invoiceable
 
   has_many :line_items
-  accepts_nested_attributes_for :line_items
+  accepts_nested_attributes_for :line_items, allow_destroy: true
 
   validates_presence_of :due_at, :bill_to
 
